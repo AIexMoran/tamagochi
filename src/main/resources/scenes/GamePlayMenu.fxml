@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1440.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="world.ucode.menus.gamePlay.GamePlay">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="715.0" minWidth="10.0" prefWidth="262.0" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="1218.0" minWidth="10.0" prefWidth="1178.0" />
@@ -27,9 +27,9 @@
             <RowConstraints maxHeight="395.0" minHeight="10.0" prefHeight="247.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Canvas fx:id="tamagochiCanvas" height="496.0" width="1178.0" />
+            <Canvas fx:id="tamagotchiCanvas" height="496.0" width="1178.0" />
             <Canvas fx:id="scoreCanvas" height="245.0" width="1178.0" GridPane.rowIndex="2" />
-            <Label fx:id="tamagotciName" prefHeight="88.0" prefWidth="1185.0" style="-fx-background-color: #FFFFFF; -fx-border-color: black; -fx-border-width: 6px; -fx-alignment: center;" text="NAME" GridPane.rowIndex="1">
+            <Label fx:id="tamagotchiName" prefHeight="88.0" prefWidth="1185.0" style="-fx-background-color: #FFFFFF; -fx-border-color: black; -fx-border-width: 6px; -fx-alignment: center;" text="NAME" GridPane.rowIndex="1">
                <font>
                   <Font name="Impact" size="43.0" />
                </font>
@@ -54,12 +54,12 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" onAction="#saveGame" prefHeight="57.0" prefWidth="281.0" style="-fx-background-color: #FFFFFF; -fx-border-color: black; -fx-border-width: 3px;" text="SAVE GAME">
+                  <Button fx:id="saveGameButton" mnemonicParsing="false" onAction="#saveGame" prefHeight="57.0" prefWidth="281.0" style="-fx-background-color: #FFFFFF; -fx-border-color: black; -fx-border-width: 3px;" text="SAVE GAME">
                      <font>
                         <Font name="Impact" size="32.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#exitGame" prefHeight="57.0" prefWidth="281.0" style="-fx-background-color: #FFFFFF; -fx-border-color: black; -fx-border-width: 3px;" text="EXIT GAME" GridPane.rowIndex="1">
+                  <Button fx:id="exitGameButton" mnemonicParsing="false" onAction="#exitGame" prefHeight="57.0" prefWidth="281.0" style="-fx-background-color: #FFFFFF; -fx-border-color: black; -fx-border-width: 3px;" text="EXIT GAME" GridPane.rowIndex="1">
                      <font>
                         <Font name="Impact" size="32.0" />
                      </font>
@@ -78,27 +78,27 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" onAction="#feedPet" prefHeight="57.0" prefWidth="281.0" style="-fx-background-color: #FFFFFF; -fx-border-color: black; -fx-border-width: 6px;" text="FEED" GridPane.rowIndex="1">
+                  <Button fx:id="feedButton" mnemonicParsing="false" onAction="#feedPet" prefHeight="57.0" prefWidth="281.0" style="-fx-background-color: #FFFFFF; -fx-border-color: black; -fx-border-width: 6px;" text="FEED" GridPane.rowIndex="1">
                      <font>
                         <Font name="Impact" size="32.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#playWithPet" prefHeight="57.0" prefWidth="281.0" style="-fx-background-color: #FFFFFF; -fx-border-color: black; -fx-border-width: 6px;" text="PLAY">
+                  <Button fx:id="playButton" mnemonicParsing="false" onAction="#playWithPet" prefHeight="57.0" prefWidth="281.0" style="-fx-background-color: #FFFFFF; -fx-border-color: black; -fx-border-width: 6px;" text="PLAY">
                      <font>
                         <Font name="Impact" size="32.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#drinkPet" prefHeight="57.0" prefWidth="281.0" style="-fx-background-color: #FFFFFF; -fx-border-color: black; -fx-border-width: 6px;" text="DRINK" GridPane.rowIndex="2">
+                  <Button fx:id="drinkButton" mnemonicParsing="false" onAction="#drinkPet" prefHeight="57.0" prefWidth="281.0" style="-fx-background-color: #FFFFFF; -fx-border-color: black; -fx-border-width: 6px;" text="DRINK" GridPane.rowIndex="2">
                      <font>
                         <Font name="Impact" size="32.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#healPet" prefHeight="57.0" prefWidth="281.0" style="-fx-background-color: #FFFFFF; -fx-border-color: black; -fx-border-width: 6px;" text="HEAL" GridPane.rowIndex="3">
+                  <Button fx:id="healButton" mnemonicParsing="false" onAction="#healPet" prefHeight="57.0" prefWidth="281.0" style="-fx-background-color: #FFFFFF; -fx-border-color: black; -fx-border-width: 6px;" text="HEAL" GridPane.rowIndex="3">
                      <font>
                         <Font name="Impact" size="32.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#cleanPet" prefHeight="57.0" prefWidth="281.0" style="-fx-background-color: #FFFFFF; -fx-border-color: black; -fx-border-width: 6px;" text="CLEAN" GridPane.rowIndex="4">
+                  <Button fx:id="cleanButton" mnemonicParsing="false" onAction="#cleanPet" prefHeight="57.0" prefWidth="281.0" style="-fx-background-color: #FFFFFF; -fx-border-color: black; -fx-border-width: 6px;" text="CLEAN" GridPane.rowIndex="4">
                      <font>
                         <Font name="Impact" size="32.0" />
                      </font>
