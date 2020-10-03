@@ -45,7 +45,7 @@ public class GamePlay {
         tamagotchiCanvas.getGraphicsContext2D().clearRect(0, 0, tamagotchiCanvas.getWidth(), tamagotchiCanvas.getHeight());
     }
 
-    public void newGame(String name, String pet) {
+    public void newGame(String name, String pet, double maxHealth) {
         tamagotchiName.setText(name);
     }
 

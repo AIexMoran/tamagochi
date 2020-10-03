@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
+import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
 
 import javafx.scene.effect.BoxBlur;
@@ -35,11 +36,15 @@ public class NewGame {
     @FXML
     private Button backButton;
 
+    @FXML
+    private Slider healthSlider;
+
     public void reset() {
         unselectPet(firstPet);
         unselectPet(secondPet);
         unselectPet(thirdPet);
         nameTextField.setText("");
+        selectedPet = null;
     }
 
     private void selectPet(ImageView view) {
@@ -99,7 +104,7 @@ public class NewGame {
 
         FXMLLoader loader = handler.activate(MenuHandler.GameScene.GAME_PLAY);
         GamePlay gamePlay = loader.getController();
-        gamePlay.newGame(nameTextField.getText(), selectedPet);
+        gamePlay.newGame(nameTextField.getText(), selectedPet, healthSlider.getValue());
     }
 
 }
